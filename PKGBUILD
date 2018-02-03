@@ -59,6 +59,7 @@ package() {
   mkdir $pkgdir/usr/lib
   mkdir $pkgdir/usr/include
 
-	TARGET=arm-linux-musleabihf OUTPUT="$pkgdir/usr/" make install
+	TARGET=arm-linux-musleabihf OUTPUT="usr/" make install
+  cp $srcdir/musl-cross-make-$(_gitcommit_short)/output/usr $pkgdir/usr
 }
 md5sums=('b0f2cc1c42edde04a70c293c00d38be6')
