@@ -54,11 +54,7 @@ check() {
 
 package() {
 	cd "$srcdir/musl-cross-make-${_gitcommit_short}"
-  mkdir $pkgdir/usr
-  mkdir $pkgdir/usr/bin
-  mkdir $pkgdir/usr/lib
-  mkdir $pkgdir/usr/include
-
+  TARGET=arm-linux-musleabihf make prefix="/" install
 	TARGET=arm-linux-musleabihf make prefix="/usr" install
   cp $srcdir/musl-cross-make-$_gitcommit_short/output/usr $pkgdir/usr
 }
