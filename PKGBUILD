@@ -54,6 +54,6 @@ check() {
 
 package() {
 	cd "$srcdir/musl-cross-make-${_gitcommit_short}"
-	OUTPUT="$pkgdir/" make install
+	TARGET=arm-linux-musleabihf OUTPUT="$pkgdir/" make install
 }
 md5sums=('b0f2cc1c42edde04a70c293c00d38be6')
