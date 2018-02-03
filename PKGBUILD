@@ -31,7 +31,10 @@ noextract=()
 md5sums=()
 validpgpkeys=()
 BUILDENV+=('!check')
-MAKEFLAGS="-j1"
+MAKEFLAGS="-j4"
+CPPFLAGS=""
+CFLAGS=""
+CXXFLAGS=""
 
 prepare() {
 	cd "$srcdir"
